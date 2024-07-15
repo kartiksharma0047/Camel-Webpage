@@ -6,10 +6,10 @@
 }
 
 body::-webkit-scrollbar {
-/*     display: none; */
+    display: none;
 }
 
-.Header {
+/* .Header {
     height: 64px;
     padding: 0 64px;
     display: flex;
@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     box-shadow: 0 3px 6px #AA00FF40;
 }
-
+ */
 .Header img {
     height: 40px;
     width: 40px;
