@@ -1191,6 +1191,7 @@ body::-webkit-scrollbar {
 
     .WhyChooseUs {
         padding: 20px 24px;
+        background-position: center;
     }
 
     .WhyChooseUs h1 {
