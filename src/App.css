@@ -104,7 +104,7 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
-    background-image: url('.\Assets\Assets Desktop\Graph.svg');
+    background-image: url('./Assets/Assets Desktop/Graph.svg');
     background-size: cover;
     background-repeat: no-repeat;
 }
