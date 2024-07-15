@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faSquareInstagram, faSquareXTwitter, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faLocationDot, faPhone, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
@@ -263,13 +263,13 @@ function App() {
             <h1>Socials</h1>
             <ul>
               <li>
-                <FontAwesomeIcon icon={faInstagram} />Instagram
+                <FontAwesomeIcon icon={faSquareInstagram} />Instagram
               </li>
               <li>
                 <FontAwesomeIcon icon={faLinkedin} />Linkedin
               </li>
               <li>
-                <FontAwesomeIcon icon={faXTwitter} />X
+                <FontAwesomeIcon icon={faSquareXTwitter} />X
               </li>
             </ul>
           </div>
