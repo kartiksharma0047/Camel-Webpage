@@ -139,18 +139,23 @@ body::-webkit-scrollbar {
     0% {
         transform: rotate(0deg);
     }
+
     1% {
         transform: rotate(1deg);
     }
+
     25% {
         transform: rotate(30deg);
     }
-    30%{
+
+    30% {
         transform: rotate(29deg);
     }
+
     50% {
         transform: rotate(-30deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
@@ -177,7 +182,7 @@ body::-webkit-scrollbar {
     font-weight: 600;
     font-size: 24px;
     color: #8000FF;
-    margin-top: 8px;
+    margin: 8px 0 8px 0;
 }
 
 .WhosCamelDigital h2 {
@@ -187,6 +192,7 @@ body::-webkit-scrollbar {
     font-size: 16px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .OurServices {
@@ -229,7 +235,8 @@ body::-webkit-scrollbar {
     margin: 40px 0 20px 0;
     transition: all 0.3s;
 }
-.ServicesDivDesktop div:hover{
+
+.ServicesDivDesktop div:hover {
     box-shadow: 0px 6px 16px 0px #AA00FF40;
 }
 
@@ -320,7 +327,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 960px;
     margin-bottom: 32px;
 }
@@ -352,19 +359,19 @@ body::-webkit-scrollbar {
     border-radius: 8px;
     padding: 0.5px;
     background: linear-gradient(90deg, rgba(217, 217, 217, 0.5) 0%, rgba(211, 123, 255, 0.5) 100%);
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
-    mask: 
-        linear-gradient(#fff 0 0) content-box, 
+    mask:
+        linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
-            mask-composite: exclude;
+    mask-composite: exclude;
     z-index: -1;
 }
 
 
-.WhyChooseUs .Qualities div:hover{
+.WhyChooseUs .Qualities div:hover {
     box-shadow: 0px 4px 12px 0px #4D4D4D40;
     backdrop-filter: blur(10px);
     background: #FFFFFF4D;
@@ -422,6 +429,7 @@ body::-webkit-scrollbar {
     padding: 10px 20px;
     margin-bottom: 16px;
 }
+
 .Frame5 input:focus {
     outline: 1px solid rgb(183, 183, 183);
 }
@@ -605,6 +613,26 @@ body::-webkit-scrollbar {
 .Footer3 h1 {
     font-size: 14px;
     font-weight: 400;
+}
+.Footer button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.Footer a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s;
+
+    &:hover{
+        color: #c285ff;
+    }
 }
 
 
@@ -1059,12 +1087,13 @@ body::-webkit-scrollbar {
     }
 
     .Header img {
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
     }
 
-    .HamburgerIcon div svg {
-        font-size: 1.3rem;
+    .HamburgerIcon svg {
+        width: 32px;
+        height: 32px;
     }
 
     .HamburgerIcon div svg:hover {
@@ -1076,15 +1105,16 @@ body::-webkit-scrollbar {
     }
 
     .HamburgerIcon div ul {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .HamburgerIcon div ul li {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .HamburgerIcon div ul li button {
-        font-size: 10px;
+        font-size: 15px;
+        font-weight: 600;
     }
 
     .HeroSectionPC {
@@ -1094,31 +1124,31 @@ body::-webkit-scrollbar {
     }
 
     .HeroSectionPCLeft h2 {
-        font-size: 13px;
-        width: 100px;
+        font-size: 24px;
+        width: 185px;
     }
 
     .HeroSectionPCLeft h1 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .HeroSectionPCRight img {
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
     }
 
     .WhosCamelDigital {
-        padding: 20px 24px 0px 24px;
-        height: 110px;
+        padding: 32px 24px;
+        height: 224px;
     }
 
     .WhosCamelDigital h1 {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .WhosCamelDigital h2 {
         max-width: 350px;
-        font-size: 9px;
+        font-size: 16px;
     }
 
     .OurServices {
@@ -1127,11 +1157,11 @@ body::-webkit-scrollbar {
     }
 
     .Frame1 h1 {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .Frame1 h2 {
-        font-size: 9px;
+        font-size: 16px;
     }
 
     .ServicesDivDesktop {
@@ -1142,29 +1172,32 @@ body::-webkit-scrollbar {
     }
 
     .ServicesDivDesktop div {
-        margin: 20px 0 10px 0;
-        width: 200px;
-        padding: 10px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
         flex-direction: row;
+        width: 310px;
+        height: 72px;
+        padding: 12px 16px;
+        border-radius: 16px;
     }
 
     .ServicesDivDesktop div img {
-        height: 34px;
-        width: 34px;
-        padding: 1px;
+        height: 40px;
+        width: 40px;
     }
 
     .ServicesDivDesktop div h1 {
-        font-size: 12px;
+        font-size: 16px;
+        width: max-content;
+        margin: 0;
+        margin-left: 16px;
     }
 
     .OurClientsText {
         top: 20px;
         left: 24px;
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .OurClients {
@@ -1180,92 +1213,143 @@ body::-webkit-scrollbar {
         height: 70px;
         top: 50px;
         padding: 0px 5px;
-        gap: 20px;
+        gap: 0px;
         display: flex;
         align-items: center;
     }
 
     .MediaScroll img {
-        transform: scale(0.5);
+        transform: scale(0.65);
     }
 
     .WhyChooseUs {
         padding: 20px 24px;
+        background-position: center;
+        margin-bottom: 32px;
     }
 
     .WhyChooseUs h1 {
-        font-size: 12px;
-        margin-bottom: 2rem;
+        font-size: 16px;
+        margin-bottom: 16px;
     }
 
     .WhyChooseUs .Qualities {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 0px;
+        width: 328px;
+        flex-direction: row;
+        margin-bottom: 8px;
     }
 
     .WhyChooseUs .Qualities div {
-        width: 230px;
-        margin-bottom: 30px;
+        width: 160px;
+        height: 99px;
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+
+    .WhyChooseUs .Qualities div img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .WhyChooseUs .Qualities div h2 {
+        font-size: 16px;
     }
 
     .BookACall {
-        padding: 0px 24px 26px 24px;
+        padding: 0px 16px 26px 16px;
     }
 
     .BookACall h1 {
-        font-size: 12px;
+        font-size: 16px;
+        margin: 0;
+
     }
 
     .Frame3 {
-        margin-top: 22px;
+        width: 328px;
+        height: 326px;
+        border-radius: 8px;
         display: flex;
         flex-direction: column;
-        height: 240px;
     }
 
     .Frame5 button {
-        margin-top: 0.5rem;
-        transform: scale(0.6);
+        width: 100px;
+        height: 35px;
+        padding: 8px 24px;
+        border-radius: 16px;
+        font-size: 16px;
+        text-align: left;
+        transform: scale(1);
+        font-weight: 400;
     }
 
     .Frame5 form {
-        text-align: center;
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Frame5 form div input {
+        width: 307px;
+        height: 37px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 16px;
+        margin-bottom: 16px;
+    }
+
+    .Frame5 div p{
+        font-size: 12px;
+        bottom: 2%;
     }
 
     .Frame4 {
-        margin: 15px 50px;
+        margin: 34px 60px;
         text-align: center;
     }
 
     .Frame4 hr {
         border-bottom: 2px solid #BFBFBF;
-        width: 150%;
-        left: -22%;
+        width: 162%;
+        transform: translate(-50%);
     }
 
     .Frame4 p {
+        font-size: 14px;
         left: 50%;
+        font-weight: 400;
+    }
+    .Frame6{
+        display: block;
     }
 
     .Frame6 button {
-        transform: scale(0.6);
+        width: 128px;
+        height: 35px;
+        padding: 8px 24px;
+        transform: scale(1);
     }
 
-    .Footer{
-        padding-left:24px;
-        padding-right:24px;
+    .Footer {
+        padding: 16px;
     }
+
     .Footer1 h1 {
-        font-size: 12px;
+        font-size: 14px;
+        font-weight: 400;
     }
 
     .Footer1 h2 {
-        font-size: 35px;
+        width: max-content;
+        font-size: 44px;
+        font-weight: 800;
     }
 
     .Footer2 {
-        margin: 20px 0;
+        margin: 0;
+        margin-top: 20px;
     }
 
     .Footer2 img {
@@ -1283,45 +1367,49 @@ body::-webkit-scrollbar {
     }
 
     .Footer2 div {
-        width: 150px;
+        width: 328px;
         text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .Footer2 div h1 {
-        font-size: 9px;
+        font-size: 16px;
+        margin-bottom: 20px;
     }
 
     .Footer2 div ul li {
-        font-size: 7px;
+        font-size: 14px;
+        font-weight: 200;
+        margin: 0;
+        margin-bottom: 16px;
     }
 
     .Footer2 div li svg {
         padding: 0 6px 0 2px;
-        width: 6px;
-        height: 6px;
+        width: 12px;
+        height: 12px;
     }
 
     .Footer3 h1 {
-        font-size: 6px;
+        font-size: 20px;
     }
 
     .popup-content {
         width: 80%;
         height: 30%;
-        padding: 40px 20px;
+        padding: 30px 20px;
     }
 
     .popup-content h2 {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .popup-content p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .popup-content svg {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 
     .popup-content svg:hover {
