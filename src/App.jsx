@@ -2,8 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faSquareInstagram, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faLocationDot, faPhone, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faBars, faLocationDot, faPhone, faXmark, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import {
   LogoHero, GraphicDesiginingIcon, DigitalMarketingIcon, WebsiteDevelopmentIcon, UiUxIcon, SEOIcon, PPTDesigningIcon, LogoDark, SyncTattooIcon, BriskIcon, GhunghatIcon, MuffTattooIcon, MSCIcon, LogoIconPNG, KoruIcon, TmrIcon, HouseOfTattooIcon, SkinBuzzIcon, SoftLensIcon, LogoIcon2PNG, NishaIcon, EternoIcon, FastDeliveryIcon, AffordablePriceIcon, BestQualityIcon, CustomDesignIcon, LogoHeroWhite
@@ -86,17 +85,23 @@ function App() {
     setHamburgerOpen(!isHamburgerOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <div className="Header">
         <img src={LogoHero} alt="Logo" />
         <ul className='NotHamburgerIcon'>
-          <li><button>Home</button></li>
-          <li><button>About Us</button></li>
-          <li><button>Contact Us</button></li>
-          <li><button>Clients</button></li>
-          <li><button>Why Us</button></li>
-          <li><button>Contact Us</button></li>
+          <li><button onClick={() => scrollToSection('Home')}>Home</button></li>
+          <li><button onClick={() => scrollToSection('AboutUS')}>About Us</button></li>
+          <li><button onClick={() => scrollToSection('OurClients')}>Clients</button></li>
+          <li><button onClick={() => scrollToSection('WhyWeDiffer')}>Why Us</button></li>
+          <li><button onClick={() => scrollToSection('ContactUS')}>Contact Us</button></li>
         </ul>
         <div className='HamburgerIcon'>
           <FontAwesomeIcon icon={faBars} onClick={handleHamburgerClick} />
@@ -104,24 +109,24 @@ function App() {
             <div className="HamburgerMenu">
               <FontAwesomeIcon icon={faXmark} onClick={handleHamburgerClick} />
               <ul>
-                <li><button>Home</button></li>
-                <li><button>About Us</button></li>
-                <li><button>Contact Us</button></li>
-                <li><button>Clients</button></li>
-                <li><button>Why Us</button></li>
-                <li><button>Contact Us</button></li>
+                <li><button onClick={() => scrollToSection('Home')}>Home</button></li>
+                <li><button onClick={() => scrollToSection('AboutUS')}>About Us</button></li>
+                <li><button onClick={() => scrollToSection('OurClients')}>Clients</button></li>
+                <li><button onClick={() => scrollToSection('WhyWeDiffer')}>Why Us</button></li>
+                <li><button onClick={() => scrollToSection('ContactUS')}>Contact Us</button></li>
               </ul>
             </div>
           )}
         </div>
       </div>
-      <div className='HeroSectionPC'>
+      <div id='Home' className='HeroSectionPC'>
         <div className='HeroSectionPCLeft'>
           <h2>Boost your Business with our</h2>
           <h1>Premium services!</h1>
         </div>
         <div className='HeroSectionPCRight'>
           <img src={LogoHero} alt="Camel logo for PC" />
+          <span id='AboutUS'></span>
         </div>
       </div>
       <div className='WhosCamelDigital'>
@@ -129,7 +134,7 @@ function App() {
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
         <h2>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
       </div>
-      <div className='OurServices'>
+      <div id='Services' className='OurServices'>
         <div className='Frame1'>
           <h1>Premium Services like no other</h1>
           <h2>We have highly skilles people that will be utilizing their knowledge for generating the best outcome for your business therefore touching a new level of ROI. Our services are super affordable.</h2>
@@ -157,7 +162,7 @@ function App() {
           </div>
           <div>
             <img src={PPTDesigningIcon} alt="img" />
-            <h1>PPT Designing</h1>
+            <h1 id='OurClients'>PPT Designing</h1>
           </div>
         </div>
       </div>
@@ -181,7 +186,7 @@ function App() {
           <img src={EternoIcon} alt="img" />
         </div>
       </div>
-      <div className='WhyChooseUs'>
+      <div id='WhyWeDiffer' className='WhyChooseUs'>
         <h1>Why we differ</h1>
         <div className='Qualities'>
           <div>
@@ -251,7 +256,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='Footer'>
+      <div id='ContactUS' className='Footer'>
         <div className='Footer1'>
           <h1>Need help in your digital journey?</h1>
           <h2>CAMEL DIGITAL</h2>
@@ -262,13 +267,13 @@ function App() {
             <h1>Socials</h1>
             <ul>
               <li>
-                <FontAwesomeIcon icon={faSquareInstagram} />Instagram
+                <a target="_blank" href='https://www.instagram.com/camel.digital_agency/'><FontAwesomeIcon icon={faSquareInstagram} />Instagram</a>
               </li>
               <li>
-                <FontAwesomeIcon icon={faLinkedin} />Linkedin
+                <a target="_blank" href='https://www.linkedin.com/company/camel-digital-india/'><FontAwesomeIcon icon={faLinkedin} />Linkedin</a>
               </li>
               <li>
-                <FontAwesomeIcon icon={faSquareXTwitter} />X
+                <a target="_blank" href=' https://x.com/Camel_digitalin?s=08 '><FontAwesomeIcon icon={faSquareXTwitter} />X</a>
               </li>
             </ul>
           </div>
@@ -289,10 +294,10 @@ function App() {
           <div className='FooterCompany'>
             <h1>Company</h1>
             <ul>
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Clients</li>
-              <li>Why Us</li>
+              <li><button onClick={() => scrollToSection('AboutUS')}>About Us</button></li>
+              <li><button onClick={() => scrollToSection('Services')}>Services</button></li>
+              <li><button onClick={() => scrollToSection('OurClients')}>Clients</button></li>
+              <li><button onClick={() => scrollToSection('WhyWeDiffer')}>Why Us</button></li>
             </ul>
           </div>
         </div>

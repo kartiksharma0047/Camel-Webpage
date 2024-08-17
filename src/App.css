@@ -614,6 +614,26 @@ body::-webkit-scrollbar {
     font-size: 14px;
     font-weight: 400;
 }
+.Footer button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.Footer a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s;
+
+    &:hover{
+        color: #c285ff;
+    }
+}
 
 
 /* Responsiveness */
@@ -1371,7 +1391,7 @@ body::-webkit-scrollbar {
     }
 
     .Footer3 h1 {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .popup-content {
