@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faSquareInstagram, faSquareXTwitter, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faSquareInstagram, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faLocationDot, faPhone, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
@@ -38,7 +38,7 @@ function App() {
 
     // Name validation
     if (!formData.name) {
-      errors.name = 'Please enter a value';
+      errors.name = 'Please enter Name';
       isValid = false;
     } else if (/\d/.test(formData.name)) {
       errors.name = 'Please enter alphabetical letters only';
@@ -47,7 +47,7 @@ function App() {
 
     // Email validation
     if (!formData.email) {
-      errors.email = 'Please enter a value';
+      errors.email = 'Please enter Email';
       isValid = false;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       errors.email = "Email doesn't exist";
@@ -56,7 +56,7 @@ function App() {
 
     // Phone validation
     if (!formData.phone) {
-      errors.phone = 'Please enter a value';
+      errors.phone = 'Please enter Number';
       isValid = false;
     } else if (!/^\d+$/.test(formData.phone)) {
       errors.phone = 'Please enter numbers only';
@@ -126,9 +126,8 @@ function App() {
       </div>
       <div className='WhosCamelDigital'>
         <h1>Camel Digital, Who we are</h1>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h2>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+        <h2>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
       </div>
       <div className='OurServices'>
         <div className='Frame1'>
