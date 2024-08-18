@@ -106,7 +106,9 @@ body::-webkit-scrollbar {
     background-repeat: no-repeat;
     padding-left: 64px;
     padding-right: 64px;
+    position: relative;
 }
+
 
 .HeroSectionPCLeft h2 {
     font-size: 64px;
@@ -614,7 +616,8 @@ body::-webkit-scrollbar {
     font-size: 14px;
     font-weight: 400;
 }
-.Footer button{
+
+.Footer button {
     background-color: transparent;
     color: white;
     border: none;
@@ -625,12 +628,13 @@ body::-webkit-scrollbar {
         transform: scale(1.1);
     }
 }
-.Footer a{
+
+.Footer a {
     color: white;
     text-decoration: none;
     transition: all 0.4s;
 
-    &:hover{
+    &:hover {
         color: #c285ff;
     }
 }
@@ -1123,6 +1127,18 @@ body::-webkit-scrollbar {
         padding-right: 24px;
     }
 
+    .HeroSectionPC::after {
+        content: '';
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background: linear-gradient(transparent, rgba(255, 255, 255, 0.5));
+        filter: blur(10px);
+        pointer-events: none;
+      }
+
     .HeroSectionPCLeft h2 {
         font-size: 24px;
         width: 185px;
@@ -1300,7 +1316,7 @@ body::-webkit-scrollbar {
         margin-bottom: 16px;
     }
 
-    .Frame5 div p{
+    .Frame5 div p {
         font-size: 12px;
         bottom: 2%;
     }
@@ -1321,7 +1337,8 @@ body::-webkit-scrollbar {
         left: 50%;
         font-weight: 400;
     }
-    .Frame6{
+
+    .Frame6 {
         display: block;
     }
 
